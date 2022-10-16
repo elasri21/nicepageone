@@ -1,0 +1,221 @@
+:root {
+    --header-bg: #f2f2f2;
+    --close-c: #337ab7;
+    --title-c: #111;/*text color*/
+    --footer-bg: #333333;
+    --link-c: #b8b4dd;
+    --hover-link-c: #d6d4ec;
+    --yellow-c: #ffc002;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #fff;
+    font-family: "Arial", sans-serif;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--title-c);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    opacity: .75;
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing */
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/shape-1.png");
+    background-position: center;
+    background-size: 100% 100%;
+    flex-direction: column;
+    background-repeat: no-repeat;
+}
+.landing .description {
+    max-width: 500px;
+}
+@media (max-width: 767px) {
+    .landing .plate {
+        display: none;
+    }
+}
+.landing .plate {
+    left: 0;
+    top: 0;
+    max-width: 400px;
+}
+/* end landing */
+/* start out menu */
+@media (max-width: 767px) {
+    .our-menu .menus {
+        flex-direction: column;
+    }
+    .our-menu .menus .menu {
+        width: 100% !important;
+    }
+    .our-menu .menus .salad-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .our-menu .menus .salad-menu .info {
+        text-align: center;
+    }
+}
+.our-menu .menus .menu {
+    width: calc(50% - 50px);
+}
+/* end out menu */
+/* start main plate */
+.main-plate .image {
+    height: 400px;
+    background-image: url("../images/main-plate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main-plate .content {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+}
+@media (max-width: 767px) {
+    .main-plate .content {
+        flex-direction: column;
+    }
+    .main-plate .content .main-menu {
+        width: 100% !important;
+    }
+}
+.main-plate .content .main-menu {
+    width: calc(50% - 20px);
+}
+/* end main plate */
+/* start salad and snack */
+.salad-snacks {
+    margin-top: -50px;
+}
+.salad-snacks h2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background-color: var(--yellow-c);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px
+}
+@media (max-width: 767px) {
+    .salad-snacks {
+        flex-direction: column;
+    }
+    .salad-snacks > div {
+        width: 100%;
+    }
+    .salad-snacks .image {
+        order: 1;
+    }
+    .salad-snacks .info {
+        order: 2;
+    }
+}
+/* end salad and snack */
+/* start organic-food */
+@media (max-width: 767px) {
+    .organic-food h2  {
+        font-size: 50px !important;
+    }
+}
+.organic-food p {
+    max-width: 500px;
+}
+.organic-food img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.organic-food .left {
+    top: 30px;
+    left: 30px;
+}
+.organic-food .right{
+    bottom: 30px;
+    right: 30px;
+}
+/* end organic-food */
+/* start preview */
+.reviews .review:not(:first-of-type) {
+    display: none;
+}
+/* end preview */
+/* start contact */
+.contact .form-container {
+    max-width: 500px;
+}
+.contact .form-container .email {
+    border: 2px solid var(--yellow-c);
+}
+.contact .form-container .submit {
+    border: 2px solid var(--yellow-c);
+}
+/* end contact */
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+/* end footer */
